@@ -1,2 +1,2 @@
 # cleanerSneaker
-Responsive website w/ bookings,user portals and admin portals
+Responsive website for cleaner sneaker business w/ bookings,user portals and admin portals
