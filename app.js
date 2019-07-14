@@ -1,6 +1,8 @@
 /* Declare necessary node.js modules */
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+const main = require('./controllers/mainRouter');
 
 /* Connection to localhost or Heroku */
 const port = process.env.PORT || 3000;
@@ -10,11 +12,10 @@ app.listen(port, function () {
 
 /* Declare middlewares */
 app.use(express.static('public'));
-app.use
+app.use(bodyParser.urlencoded({ extended: false }));
 
 /* Implement EJS template */ 
 app.set('view engine', 'ejs');
 
 /* Declare routes */
-const main = require('./controllers/mainRouter');
 app.use('/',main);
