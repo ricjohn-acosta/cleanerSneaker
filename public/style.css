@@ -19,6 +19,56 @@ html {
     overflow-x           : hidden;
 }
 
+/* Scrolldown buttons */
+.scrolldown-btn a {
+    position: absolute;
+    /* Position of element will be fixed */
+    bottom : 20px;
+    left   : 50%;
+    z-index: 1;
+    /* Greater z-index value means that target element will be on top of the background picture. If negative, it will be behind bg pic. */
+    -webkit-transform: translate(0, -50%);
+    transform        : translate(0, -50%);
+    color            : rgb(29, 28, 28);
+    font             : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing   : .1em;
+    text-decoration  : none;
+    transition       : opacity .3s;
+}
+
+.scrolldown-btn a:hover {
+    opacity: .5;
+}
+
+.scrolldown-btn a span {
+    position     : absolute;
+    top          : -50px;
+    left         : 50%;
+    width        : 46px;
+    height       : 46px;
+    margin-left  : -23px;
+    border       : 2.5px solid rgb(29, 28, 28);
+    border-radius: 100%;
+    box-sizing   : border-box;
+}
+
+.scrolldown-btn a span::after {
+    position         : absolute;
+    top              : 50%;
+    left             : 50%;
+    content          : '';
+    width            : 16px;
+    height           : 16px;
+    margin           : -12px 0 0 -8px;
+    border-left      : 2px solid rgb(29, 28, 28);
+    border-bottom    : 2px solid rgb(29, 28, 28);
+    -webkit-transform: rotate(-45deg);
+    transform        : rotate(-45deg);
+    box-sizing       : border-box;
+
+
+}
+
 /* Social media buttons */
 .btn {
     display      : inline-block;
