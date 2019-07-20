@@ -82,7 +82,7 @@ html {
     overflow     : hidden;
     position     : fixed;
     right        : 90px;
-    top          : 30px;
+    top          : 60px;
 }
 
 .btn i {
@@ -103,10 +103,13 @@ html {
 /* Social media icons */
 
 .icons {
-    position: relative;
+    position: fixed;
     display : inline-block;
+    z-index: 2;
+    
 }
 
+/* Tooltip */
 .icons .tooltip-text {
     visibility      : hidden;
     width           : 200px;
@@ -121,7 +124,7 @@ html {
     /* Position the tooltip */
     position: absolute;
     left    : 1670px;
-    top     : 115px;
+    top     : 160px;
 }
 
 .icons .tooltip-text::after {
@@ -141,11 +144,8 @@ html {
 
 }
 
-#fb {
-    content: "\f09a";
-}
 
-/* First section */
+/* Welcome Section */
 
 .welcome-content {
     padding-top : 150px;
@@ -176,6 +176,18 @@ html {
     font-style: italic;
 }
 
+/* Navbar */
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Services section */
 .services {
     position: relative;
+    background-color: #edf1f3;
+    height: 1000px;
 }
