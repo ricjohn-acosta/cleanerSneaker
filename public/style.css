@@ -1,6 +1,6 @@
 body,
 html {
-    height         : 200%;
+    height         : 100%;
     scroll-behavior: smooth;
 }
 
@@ -15,16 +15,16 @@ html {
     background-repeat    : no-repeat;
     background-size      : cover;
     background-attachment: fixed;
-    height               : 1000px;
+    height               : 980px;
     overflow-x           : hidden;
 }
 
 /* Scrolldown buttons */
 .scrolldown-btn a {
-    position: absolute;
+    position: relative;
     /* Position of element will be fixed */
-    bottom : 20px;
-    left   : 50%;
+    bottom : -550px;
+    left   : 45%;
     z-index: 1;
     /* Greater z-index value means that target element will be on top of the background picture. If negative, it will be behind bg pic. */
     -webkit-transform: translate(0, -50%);
@@ -53,6 +53,58 @@ html {
 }
 
 .scrolldown-btn a span::after {
+    position         : absolute;
+    top              : 50%;
+    left             : 50%;
+    content          : '';
+    width            : 16px;
+    height           : 16px;
+    margin           : -12px 0 0 -8px;
+    border-left      : 2px solid rgb(29, 28, 28);
+    border-bottom    : 2px solid rgb(29, 28, 28);
+    -webkit-transform: rotate(-45deg);
+    transform        : rotate(-45deg);
+    box-sizing       : border-box;
+
+
+}
+
+/* Scroll down button 2 */
+
+.scrolldown-btn2 a {
+    position: relative;
+    /* Position of element will be fixed */
+    bottom: -830px;
+    /*830*/
+    left   : 48.5%;
+    z-index: 1;
+    /* Greater z-index value means that target element will be on top of the background picture. If negative, it will be behind bg pic. */
+    -webkit-transform: translate(0, -50%);
+    transform        : translate(0, -50%);
+    color            : rgb(29, 28, 28);
+    font             : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing   : .1em;
+    text-decoration  : none;
+    transition       : opacity .3s;
+}
+
+.scrolldown-btn2 a:hover {
+    opacity: .5;
+}
+
+.scrolldown-btn2 a span {
+    position     : absolute;
+    top          : -50px;
+    left         : 50%;
+    width        : 46px;
+    height       : 46px;
+    margin-left  : -23px;
+    border       : 2.5px solid rgb(29, 28, 28);
+    border-radius: 100%;
+    box-sizing   : border-box;
+}
+
+.scrolldown-btn2 a span::after {
     position         : absolute;
     top              : 50%;
     left             : 50%;
@@ -190,18 +242,27 @@ html {
 }
 
 /* Add top padding to elements that are placed immediately after .sticky element */
-.sticky+.services {
+.sticky+.services-container {
     padding-top: 60px;
 }
 
 /* Navbar items */
+
 .nav-item {
     padding-top: 5px;
 }
 
 /* Services section */
-.services {
+.services-container {
     position        : relative;
-    background-color: #edf1f3;
+    background-color: rgba(228, 233, 237, 1);
     height          : 1000px;
+}
+
+/* Testimonials section */
+.testimonials-container {
+    position        : relative;
+    background-color: rgba(108, 122, 137, 1);
+    height          : 1000px;
+    padding-top     : 60px
 }
